@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ella's Box</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div id="background">
+        <svg>
+            <defs>
+                <filter id="goo">
+                    <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                    <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+                    <feBlend in="SourceGraphic" in2="goo" />
+                </filter>
+            </defs>
+        </svg>
+
+        <div class="goo-container-svg">
+            <div class="blob blob-one"></div>
+            <div class="blob blob-two"></div>
+            <div class="blob blob-three"></div>
+        </div>
+    </div>
+    <div id="container">
+        <h3 id="PreTitle">Welcome to</h3>
+        <h1 id="Title">Ella's Box</h1>
+        <h2>Quick Links</h2>
+        <ul>
+            <a href="jellyfin/web"><li><img src="./media/jellyfin.png"><h3>Jellyfin</h3></li></a>
+            <a href="ellasbox.ocelot-logarithm.ts.net:5055"><li><img src="./media/seerr.png"><h3>seerr</h3></li></a>
+            <!--<a href="ellasbox.ocelot-logarithm.ts.net:23333"><li><img src="./media/mcsm.png"><h3>MCSManager</h3></li></a>!-->
+            <a href="ellasbox.ocelot-logarithm.ts.net:5690"><li><img src="./media/wizarr.png"><h3>Wizarr</h3></li></a>
+            <a href="ellasbox.ocelot-logarithm.ts.net:3001"><li><img src="./media/uptime-kuma.png"><h3>Uptime Kuma</h3></li></a>
+            <a href="ellasbox.ocelot-logarithm.ts.net:8183"><li><img src="./media/muxarr.png"><h3>Muxarr</h3></li></a>
+        </ul>
+    </div>
+    <div id="footer">
+        <p>Created by Ellath3may0</p>
+        <p>Self-Hosted</p>
+    </div>
+</body>
+</html>
