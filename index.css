@@ -1,3 +1,18 @@
+:root {
+    --corner-radius:    2em;
+    
+
+    /* Colours */
+    --bg-dark:          #001024;
+    --bg-light:         #f0f0f0;
+
+    --bg-light-hover:   #dfdfdf;
+
+    --text-primary:     #cccccc;
+    --text-secondary:   #aaaaaa;
+    --text-dark:        #333333;
+}
+
 @font-face {
     font-family: Open_Sans;
     src: url('./font/Open_Sans/OpenSans-VariableFont_wdth,wght.ttf');
@@ -28,11 +43,11 @@ body {
     margin: 0;
     padding: 0;
     font-family: Quicksand, Roboto, Open_Sans, sans-serif;
-    background-color: #2f2f2f;
+    background-color: var(--bg-light);
 }
 
 div#background {
-    background-color: #f0f0f0;
+    background-color: var(--bg-light);
     width: 100%;
     height: 100%;
     z-index: -1;
@@ -48,12 +63,12 @@ div#container {
     padding: 4em;
     z-index: 1;
     margin-top: 10em;
-    border-radius: 3em;
+    border-radius: 2em;
     max-width: 30em;
     margin-left: auto;
     margin-right: auto;
     position: relative;
-    background-color: #001024;
+    background-color: var(--bg-dark);
 }
 
 div#container > ul {
@@ -64,18 +79,18 @@ div#container > ul {
 
 h3#PreTitle {
     font-size: 2em;
-    color: #888888;
+    color: var(--text-secondary);
     margin: 0;
 }
 
 h1#Title {
     font-size: 3em;
-    color: #cccccc;
+    color: var(--text-primary);
     margin: 0;
 }
 
 h2 {
-    color: #aaaaaa;
+    color: var(--text-secondary);
     margin-bottom: 0;
 }
 
@@ -88,15 +103,16 @@ div#container > ul > a > li {
     flex-direction: column;
     margin: 1em 0;
     padding: 0.5em 1em;
-    background-color: #ffffff;
-    border-radius: 2em;
+    background-color: var(--bg-light);
+    border-radius: var(--border-radius);
     align-items: center;
+    transition: color transform 200ms;
 }
 
 div#container > ul > a > li > h3 {
     margin: 0;
     font-size: 1.5em;
-    color: #333333;
+    color: var(--text-dark);
     text-decoration: none;
     margin-bottom: 0.1em;
 }
@@ -104,12 +120,13 @@ div#container > ul > a > li > h3 {
 div#container > ul > a > li > img {
     width: 3em;
     height: auto;
-    border-radius: 1em;
+    border-radius: var(--border-radius);
     margin: 0.5em;
 }
 
 div#container > ul > a > li:hover {
     background-color: #e0e0e0;
+    transform: translateY(0.2em);
     cursor: pointer;
 }
 
@@ -124,7 +141,7 @@ div#footer {
     margin-left: auto;
     margin-right: auto;
     margin-top: 5em;
-    border-radius: 3em 3em 0 0;
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
     padding: 1em;
     color: #888888;
 
@@ -143,7 +160,7 @@ div#footer {
 
 .blob-one {
     background-color: blueviolet;
-    animation: moveBlob1 10s infinite alternate ease-in-out;
+    animation: moveBlob1 12s infinite alternate ease-in-out;
 }
 
 .blob-two {
@@ -153,7 +170,7 @@ div#footer {
 
 .blob-three {
     background-color: #00ffea;
-    animation: moveBlob3 10s infinite alternate ease-in-out;
+    animation: moveBlob3 9s infinite alternate ease-in-out;
 }
 
 @keyframes moveBlob1 {
