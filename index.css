@@ -63,7 +63,7 @@ div#container {
     padding: 4em;
     z-index: 1;
     margin-top: 10em;
-    border-radius: 2em;
+    border-radius: var(--border-radius);
     max-width: 30em;
     margin-left: auto;
     margin-right: auto;
@@ -126,7 +126,7 @@ div#container > ul > a > li > img {
 
 div#container > ul > a > li:hover {
     background-color: #e0e0e0;
-    transform: translateY(0.2em);
+    transform: translateY(-0.2em);
     cursor: pointer;
 }
 
