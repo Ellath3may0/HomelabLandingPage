@@ -1,5 +1,6 @@
 :root {
     --corner-radius:    2em;
+    --icon-radius:      0.8em;
     
 
     /* Colours */
@@ -120,7 +121,7 @@ div#container > ul > a > li > h3 {
 div#container > ul > a > li > img {
     width: 3em;
     height: auto;
-    border-radius: (var(--corner-radius)/2);
+    border-radius: var(--icon-radius);
     margin: 0.5em;
 }
 
