@@ -63,7 +63,7 @@ div#container {
     padding: 4em;
     z-index: 1;
     margin-top: 10em;
-    border-radius: var(--border-radius);
+    border-radius: var(--corner-radius);
     max-width: 30em;
     margin-left: auto;
     margin-right: auto;
@@ -104,7 +104,7 @@ div#container > ul > a > li {
     margin: 1em 0;
     padding: 0.5em 1em;
     background-color: var(--bg-light);
-    border-radius: var(--border-radius);
+    border-radius: var(--corner-radius);
     align-items: center;
     transition: color transform 200ms;
 }
@@ -120,7 +120,7 @@ div#container > ul > a > li > h3 {
 div#container > ul > a > li > img {
     width: 3em;
     height: auto;
-    border-radius: var(--border-radius);
+    border-radius: var(--corner-radius);
     margin: 0.5em;
 }
 
@@ -141,7 +141,7 @@ div#footer {
     margin-left: auto;
     margin-right: auto;
     margin-top: 5em;
-    border-radius: var(--border-radius) var(--border-radius) 0 0;
+    border-radius: var(--corner-radius) var(--corner-radius) 0 0;
     padding: 1em;
     color: #888888;
 
