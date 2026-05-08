@@ -120,13 +120,13 @@ div#container > ul > a > li > h3 {
 div#container > ul > a > li > img {
     width: 3em;
     height: auto;
-    border-radius: var(--corner-radius);
+    border-radius: (var(--corner-radius)/2);
     margin: 0.5em;
 }
 
 div#container > ul > a > li:hover {
-    background-color: #e0e0e0;
-    transform: translateY(-0.2em);
+    background-color: #d0d0d0;
+    transform: translateY(0.2em);
     cursor: pointer;
 }
 
