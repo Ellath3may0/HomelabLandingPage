@@ -107,7 +107,7 @@ div#container > ul > a > li {
     background-color: var(--bg-light);
     border-radius: var(--corner-radius);
     align-items: center;
-    transition: color transform 200ms;
+    transition: all 0.2s;
 }
 
 div#container > ul > a > li > h3 {
@@ -144,7 +144,7 @@ div#footer {
     margin-top: 5em;
     border-radius: var(--corner-radius) var(--corner-radius) 0 0;
     padding: 1em;
-    color: #888888;
+    color: var(--text-secondary);
 
 }
 
@@ -215,4 +215,14 @@ div#footer {
     100% {
         transform: translate( 80%, 40%);
     }
+}
+
+#footer > p > a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+#footer > p > a:hover {
+    color: var(--text-primary);
 }
