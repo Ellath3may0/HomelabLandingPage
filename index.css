@@ -1,5 +1,5 @@
 :root {
-    --corner-radius:    2em;
+    --corner-radius:    32px;
     --icon-radius:      0.8em;
     
 
@@ -43,8 +43,10 @@
 body {
     margin: 0;
     padding: 0;
+    min-height: 100vh;
     font-family: Quicksand, Roboto, Open_Sans, sans-serif;
-    background-color: var(--bg-light);
+    background-color: #d0d0d0;
+    overflow-y: auto;
 }
 
 div#background {
@@ -61,21 +63,31 @@ div#container {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 4em;
+    padding: 3em 4em;
     z-index: 1;
-    margin-top: 10em;
+    margin: 5em auto; 
     border-radius: var(--corner-radius);
-    max-width: 30em;
-    margin-left: auto;
-    margin-right: auto;
+    max-width: 18em;
+    height: auto;
+    min-height: min-content; 
     position: relative;
     background-color: var(--bg-dark);
+    box-shadow: 0 0 1em 0.25em black;
 }
 
+
 div#container > ul {
+    display: inline-grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-auto-rows: auto;
+    column-gap: 1.25em;
+    row-gap: 1.25em;
     list-style-type: none;
     padding: 0;
-    margin: 0;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    width: 100%;
 }
 
 h3#PreTitle {
@@ -92,43 +104,48 @@ h1#Title {
 
 h2 {
     color: var(--text-secondary);
-    margin-bottom: 0;
+    margin: 0;
+    margin-bottom: 1em;
 }
 
-div#container > ul > a {
+div#container > ul > li {
+    background-color: #d0d0d0;
+    border-radius: var(--corner-radius);
+    transition: all 0.2s;
+    min-height: 8em;
+    box-shadow: 0 0 1em 0em black;
+}
+
+div#container > ul > li > a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0.5em 1em;
+    box-sizing: border-box;
     text-decoration: none;
 }
 
-div#container > ul > a > li {
-    display: flex;
-    flex-direction: column;
-    margin: 1em 0;
-    padding: 0.5em 1em;
-    background-color: var(--bg-light);
-    border-radius: var(--corner-radius);
-    align-items: center;
-    transition: all 0.2s;
-}
-
-div#container > ul > a > li > h3 {
+div#container > ul > li > a > h3 {
     margin: 0;
     font-size: 1.5em;
     color: var(--text-dark);
-    text-decoration: none;
-    margin-bottom: 0.1em;
 }
 
-div#container > ul > a > li > img {
+div#container > ul > li > a > img {
     width: 3em;
     height: auto;
     border-radius: var(--icon-radius);
     margin: 0.5em;
 }
 
-div#container > ul > a > li:hover {
-    background-color: #d0d0d0;
-    transform: translateY(0.2em);
+div#container > ul > li:hover {
+    background-color: var(--bg-light);
+    transform: translateY(-0.2em);
     cursor: pointer;
+    box-shadow: 0 0.2em 1em 0.25em black;
 }
 
 div#footer {
@@ -145,7 +162,7 @@ div#footer {
     border-radius: var(--corner-radius) var(--corner-radius) 0 0;
     padding: 1em;
     color: var(--text-secondary);
-
+    box-shadow: 0 0 1em 0.25em black;
 }
 
 .goo-container-svg {
